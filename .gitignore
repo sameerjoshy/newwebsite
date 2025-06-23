@@ -1,40 +1,32 @@
-# Node modules
+# dependencies
 node_modules/
-
-# Build output
-dist/
 .vite/
-.vscode/
 
-# Logs
+# build output
+dist/
+build/
+
+# environment files
+.env
+.env.*.local
+
+# system files
+.DS_Store
+Thumbs.db
+
+# logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
-# System files
-.DS_Store
-Thumbs.db
-
-# Env files
-.env
-.env.*.local
-
-# IDE files
+# IDE/editor config
+.vscode/
 .idea/
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
+*.sublime-project
+*.sublime-workspace
 
-# Optional: macOS + Windows system clutter
-*.log
+# optional OS-specific
 *.swp
-
-# Local Git files (not usually needed)
-.gitlocal/
-
-# OS generated files
-ehthumbs.db
-Icon?
-Desktop.ini
+*.bak
+*.tmp
