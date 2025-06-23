@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Navbar from './components/Navbar' // ✅ Add this line
 import Home from './pages/Home'
 import About from './pages/About'
 import Services from './pages/Services'
@@ -10,6 +11,7 @@ import Resources from './pages/Resources'
 export default function App() {
   return (
     <Router>
+      <Navbar /> {/* ✅ Add the Navbar here */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
