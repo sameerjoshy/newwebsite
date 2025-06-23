@@ -1,26 +1,34 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Navbar from './components/Navbar' // ✅ Add this line
-import Home from './pages/Home'
-import About from './pages/About'
-import Services from './pages/Services'
-import Frameworks from './pages/Frameworks'
-import Tools from './pages/Tools'
-import Contact from './pages/Contact'
-import Resources from './pages/Resources'
+// src/App.jsx
 
-export default function App() {
+import './global.css';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Home from './pages/Home';
+import About from './pages/About';
+import Services from './pages/Services';
+import Frameworks from './pages/Frameworks';
+import Tools from './pages/Tools';
+import Resources from './pages/Resources';
+import Contact from './pages/Contact';
+
+function App() {
   return (
     <Router>
-      <Navbar /> {/* ✅ Add the Navbar here */}
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/frameworks" element={<Frameworks />} />
-        <Route path="/tools" element={<Tools />} />
-        <Route path="/resources" element={<Resources />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
+      <Navbar />
+      <div className="container">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/frameworks" element={<Frameworks />} />
+          <Route path="/tools" element={<Tools />} />
+          <Route path="/resources" element={<Resources />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </div>
     </Router>
-  )
+  );
 }
+
+export default App;
