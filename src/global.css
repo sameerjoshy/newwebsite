@@ -1,13 +1,13 @@
-/* ===== GLOBAL STYLES ===== */
+/* File: src/global.css – Growth Engineers dark classy + edgy theme */
 
 :root {
-  --primary-color: #0070f3;
-  --accent-color: #00bfa6;
-  --text-color: #1a1a1a;
-  --bg-color: #f8f9fb;
-  --section-bg: #ffffff;
-  --border-color: #e0e0e0;
-  --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --primary-color: #7F5AF0;       /* Neon violet */
+  --accent-color: #00C9A7;        /* Electric teal */
+  --text-color: #ffffff;
+  --bg-color: #0A0A0A;
+  --section-bg: #121212;
+  --border-color: #2D2D2D;
+  --font-main: 'Inter', sans-serif;
 }
 
 * {
@@ -21,10 +21,12 @@ body {
   background-color: var(--bg-color);
   color: var(--text-color);
   line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 a {
-  color: var(--primary-color);
+  color: var(--accent-color);
   text-decoration: none;
   font-weight: 500;
 }
@@ -34,48 +36,52 @@ a:hover {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #111;
-  margin-bottom: 0.5rem;
-  font-weight: 600;
+  margin-bottom: 0.75rem;
+  font-weight: 700;
+  color: var(--text-color);
 }
 
 p {
   margin-bottom: 1rem;
+  color: #B0B0B0;
 }
 
 .container {
-  max-width: 960px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
 }
 
-/* Reusable card style */
 .card {
   background-color: var(--section-bg);
-  padding: 1.5rem;
-  border-radius: 0.5rem;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
   border: 1px solid var(--border-color);
+  transition: transform 0.3s ease;
 }
 
-/* Button */
+.card:hover {
+  transform: translateY(-4px);
+}
+
 .button {
   display: inline-block;
-  padding: 0.6rem 1.2rem;
+  padding: 0.75rem 1.5rem;
   background-color: var(--primary-color);
   color: white;
-  border-radius: 0.4rem;
+  border-radius: 0.5rem;
   font-weight: 600;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .button:hover {
-  background-color: #005bb5;
+  background-color: #5e3fd7;
+  transform: scale(1.05);
 }
 
-/* Navbar adjustments */
 .navbar {
-  background-color: #ffffff;
+  background-color: var(--section-bg);
   padding: 1rem 2rem;
   border-bottom: 1px solid var(--border-color);
   display: flex;
@@ -89,4 +95,15 @@ p {
 .navbar a {
   color: var(--text-color);
   margin-left: 1.5rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.navbar a:hover {
+  color: var(--accent-color);
+}
+
+.section {
+  padding: 6rem 2rem;
+  background-color: var(--section-bg);
 }
